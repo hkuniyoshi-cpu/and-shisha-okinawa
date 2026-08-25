@@ -1,0 +1,8 @@
+# Cloudflare Pages では無視されます（残置OK）
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/index.html"
+  status = 200

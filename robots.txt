@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AIクローラー（許可方針：許可）
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://and-shisha-okinawa.search-mania.net/sitemap.xml
