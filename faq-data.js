@@ -41,11 +41,11 @@
 
     // 料金・システム
     { c: 'price', q: '料金システムを教えてください',
-      a: 'チャージ料金は〜20:00 ¥600 ／ 20:00〜 ¥800。シーシャ1台 ¥2,500。カフェ利用（シーシャなし）は ¥1,500 で90分ソフトドリンク飲み放題＋チャージ込みです。' },
+      a: 'チャージ料金は〜20:00 ¥600 ／ 20:00〜 ¥800。シーシャ1台 ¥2,800。カフェ利用（シーシャなし）は ¥1,500 で90分ソフトドリンク飲み放題＋チャージ込みです。' },
     { c: 'price', q: '1台のシーシャを何人でシェアできますか？',
       a: '2名様までシェア可能です。シェア料金は ¥1,500。3名様以上ではもう1台ご注文をお願いしています。' },
     { c: 'price', q: '1名あたりの平均予算はどれくらいですか？',
-      a: '目安は 3,500〜5,000円（シーシャ＋ドリンク1杯＋チャージ）です。カフェ利用のみなら 1,500〜2,000円ほど。' },
+      a: '目安は 4,000〜5,500円（シーシャ＋ドリンク1杯＋チャージ）です。カフェ利用のみなら 1,500〜2,000円ほど。' },
     { c: 'price', q: '飲み放題プランはありますか？',
       a: 'ソフトドリンク90分 ¥900 ／ アルコール90分 ¥1,800（瓶ビール以外）をご用意しています。' },
     { c: 'price', q: 'カフェ利用（シーシャなし）だけでも入れますか？',
@@ -75,7 +75,7 @@
     { c: 'cafe', q: 'フードやおつまみメニューはありますか？',
       a: '軽いおつまみをご用意することがあります。詳しくは店頭にてご確認ください。' },
     { c: 'cafe', q: '沖縄らしいお酒・ドリンクはありますか？',
-      a: 'はい。泡盛・オリオンビール（¥600）・ハブ酒（¥800）・HABU SHOT（¥800）・カクテル各種、そして沖縄フルーツMIX（マンゴー／パイナップル／シークヮーサー）のボトルベースドリンク（+¥1,000）をご用意しています。' },
+      a: 'はい。泡盛・オリオンビール（¥700）・ハブ酒（¥800）・HABU SHOT（¥800）・カクテル各種、そして沖縄フルーツMIX（マンゴー／パイナップル／シークヮーサー）のボトルベースドリンク（+¥1,000）をご用意しています。' },
     { c: 'cafe', q: 'テイクアウト・持ち帰りはできますか？',
       a: 'シーシャ本体は店内でのご利用のみとなります。ドリンクの持ち帰りについてはスタッフまでご相談ください。' },
 
@@ -117,11 +117,11 @@
 
     // Pricing
     { c: 'price', q: 'How does the pricing work?',
-      a: 'Cover charge: ¥600 (until 8 PM) / ¥800 (from 8 PM). Shisha (1 pipe): ¥2,500. Café-only (no shisha): ¥1,500, includes cover charge and 90 minutes of unlimited soft drinks.' },
+      a: 'Cover charge: ¥600 (until 8 PM) / ¥800 (from 8 PM). Shisha (1 pipe): ¥2,800. Café-only (no shisha): ¥1,500, includes cover charge and 90 minutes of unlimited soft drinks.' },
     { c: 'price', q: 'How many people can share one shisha?',
       a: 'Up to 2 guests may share one pipe. Sharing charge: ¥1,500. Groups of 3+ are asked to order an additional pipe.' },
     { c: 'price', q: 'What is the average spend per person?',
-      a: 'About ¥3,500–¥5,000 per person (shisha + one drink + cover). Café-only visits run around ¥1,500–¥2,000.' },
+      a: 'About ¥4,000–¥5,500 per person (shisha + one drink + cover). Café-only visits run around ¥1,500–¥2,000.' },
     { c: 'price', q: 'Is there an all-you-can-drink plan?',
       a: 'Yes. Soft drinks 90 min for ¥900, or alcohol 90 min for ¥1,800 (bottled beer excluded).' },
     { c: 'price', q: 'Can I come just for the café without smoking shisha?',
@@ -151,7 +151,7 @@
     { c: 'cafe', q: 'Do you serve food or snacks?',
       a: 'A small snack selection is sometimes available — please ask us on the day.' },
     { c: 'cafe', q: 'Do you have local Okinawan drinks?',
-      a: 'Yes: Awamori, ORION beer (¥600), Habu Sake (¥800), HABU SHOT (¥800), cocktails, and an Okinawan-fruit bottle base (mango / pineapple / shikwasa) for +¥1,000.' },
+      a: 'Yes: Awamori, ORION beer (¥700), Habu Sake (¥800), HABU SHOT (¥800), cocktails, and an Okinawan-fruit bottle base (mango / pineapple / shikwasa) for +¥1,000.' },
     { c: 'cafe', q: 'Can I take things to go?',
       a: 'The shisha itself is for in-house use only. For drinks to go, please ask our staff.' },
 
