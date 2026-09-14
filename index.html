@@ -34,7 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="stylesheet" href="shared.css?v=6">
 <link rel="stylesheet" href="experience.css?v=3">
-<link rel="stylesheet" href="faq.css?v=1">
+<link rel="stylesheet" href="faq.css?v=2">
 <meta name="google-site-verification" content="LZg90oxtbqi0v6An7Fc0uO3ufbqcmW4_Qp9mCI2u6wk" />
 
 <!-- Google Fonts -->
@@ -111,7 +111,8 @@
             { "@type": "MenuItem", "name": "ボトルドリンク / Bottle Base Drink", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" } },
             { "@type": "MenuItem", "name": "フレーバー増量 / Flavor Boost", "offers": { "@type": "Offer", "price": "800", "priceCurrency": "JPY" } },
             { "@type": "MenuItem", "name": "アイスホース / Ice Hose", "offers": { "@type": "Offer", "price": "500", "priceCurrency": "JPY" } },
-            { "@type": "MenuItem", "name": "トップ交換 / Bowl Change", "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "JPY" } }
+            { "@type": "MenuItem", "name": "ダークリーフ / Dark Leaf", "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "JPY" } },
+            { "@type": "MenuItem", "name": "ダークリーフMIX / Dark Leaf Mix", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" }, "description": "ブロンドリーフ + ダークリーフ" }
           ]
         },
         {
@@ -356,8 +357,8 @@
           <li class="price-row"><div class="pr-info"><span class="pr-name">ボトルドリンク <em>Bottle Base Drink</em></span><span class="pr-desc">ソフト・アルコール</span></div><span class="pr-lead"></span><span class="pr-price">¥1,000</span></li>
           <li class="price-row is-best"><div class="pr-info"><span class="pr-name">フレーバー増量 <em>Flavor Boost</em></span><span class="pr-desc">味・煙が濃くなります</span></div><span class="pr-lead"></span><span class="pr-price">¥800</span></li>
           <li class="price-row is-best"><div class="pr-info"><span class="pr-name">アイスホース <em>Ice Hose</em></span></div><span class="pr-lead"></span><span class="pr-price">¥500</span></li>
-          <li class="price-row"><div class="pr-info"><span class="pr-name">ダークリーフ <em>Dark Leaf</em></span><span class="pr-desc">準備中</span></div><span class="pr-lead"></span><span class="pr-price">+¥1,000</span></li>
-          <li class="price-row"><div class="pr-info"><span class="pr-name">トップ交換 <em>Bowl Change</em></span></div><span class="pr-lead"></span><span class="pr-price">¥1,500</span></li>
+          <li class="price-row"><div class="pr-info"><span class="pr-name">ダークリーフ <em>Dark Leaf</em></span></div><span class="pr-lead"></span><span class="pr-price">¥1,500</span></li>
+          <li class="price-row"><div class="pr-info"><span class="pr-name">ダークリーフMIX <em>Dark Leaf Mix</em></span><span class="pr-desc">ブロンドリーフ + ダークリーフ</span></div><span class="pr-lead"></span><span class="pr-price">¥1,000</span></li>
         </ul>
       </div>
 
@@ -1004,7 +1005,7 @@ function applyBlog(items) {
     const imgUrl = driveImg(b.image);
     const slugMatch = (b.url || '').match(/\/blog\/([^\/\?#]+)/);
     const postSlug  = slugMatch ? slugMatch[1] : (b.date || '');
-    const blogHref  = postSlug ? `/blog/?post=${postSlug}&n=${i}` : null;
+    const blogHref  = postSlug ? `/blog/${postSlug}/` : null;
     const tagOpen  = blogHref
       ? `<a href="${blogHref}" class="e blog-card reveal">`
       : `<article class="e blog-card reveal" role="button" tabindex="0" data-idx="${i}">`;
@@ -1124,7 +1125,10 @@ function applyCTA(c) {
    FAQ アコーディオン
    ============================================================ */
 function bindFAQ() {
-  document.querySelectorAll('.qa-item .qa-q').forEach(function(btn){
+  // #faqList（旧CMS駆動のフラットFAQ）にだけ適用。#faqRoot の新カテゴリ別FAQは faq-render.js が自前でバインドする。
+  var list = document.getElementById('faqList');
+  if (!list) return;
+  list.querySelectorAll('.qa-item .qa-q').forEach(function(btn){
     btn.onclick = function() {
       const item = btn.closest('.qa-item');
       item.classList.toggle('open');
@@ -1245,7 +1249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script defer src="./shisha-particles.js?v=4"></script>
 <script defer src="./cursor.js?v=2"></script>
 <script defer src="./faq-data.js?v=2"></script>
-<script defer src="./faq-render.js?v=1"></script>
+<script defer src="./faq-render.js?v=2"></script>
 
 <!-- 3D Experience: Three.js + engine + UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
