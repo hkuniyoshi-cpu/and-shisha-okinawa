@@ -196,7 +196,7 @@ ${JSON.stringify(jsonLd)}
     ${imgUrl ? `<img src="${esc(imgUrl)}" alt="${esc(title)}" loading="eager">` : ''}
     <div class="card-body">
       ${date ? `<span class="date">${esc(dateFmt)}</span>` : ''}
-      ${post.title && String(post.title).trim() ? `<h1>${esc(post.title)}</h1>` : ''}
+      <h1>${esc(title)}</h1>
       <p class="text">${esc(bodyRaw)}</p>
     </div>
   </article>
